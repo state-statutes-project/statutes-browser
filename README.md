@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# State Statutes Browser Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React frontend application for browsing state statutes. It connects to a backend API that serves statute data from a MongoDB database.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Browse statutes with sorting and filtering
+- Filter by state and tags
+- Search statutes by keyword
+- View detailed statute information
+- Pagination for handling large datasets
+- Responsive design for mobile and desktop
 
-### `npm start`
+## Setup Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js v14+ and npm
+- A running backend API (Express.js)
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone this repository:
+   ```
+   git clone https://github.com/yourusername/statutes-browser.git
+   cd statutes-browser
+   ```
 
-### `npm run build`
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Update the API URL in `src/services/api.js` to point to your backend server.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Start the development server:
+   ```
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Deployment to GitHub Pages
 
-### `npm run eject`
+1. Update the `homepage` field in `package.json` with your GitHub username:
+   ```json
+   "homepage": "https://yourusername.github.io/statutes-browser"
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Deploy to GitHub Pages:
+   ```
+   npm run deploy
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Your application will be available at `https://yourusername.github.io/statutes-browser`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `src/App.js` - Main component and routing setup
+- `src/services/api.js` - API service for backend communication
+- `src/components/` - React components:
+  - `Header.js` - Navigation header
+  - `StatutesList.js` - List view with filtering
+  - `StatuteDetail.js` - Detailed view of a single statute
 
-## Learn More
+## Backend Connection
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This frontend is designed to work with the Express.js backend API. Make sure your backend provides these endpoints:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `GET /api/statutes` - List statutes with filtering and pagination
+- `GET /api/statutes/:id` - Get a specific statute by ID
+- `GET /api/states` - List available states
+- `GET /api/tags` - List available tags
 
-### Code Splitting
+## Customization
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Update the theme in `src/App.js` to change colors and typography
+- Modify the filtering options in `src/components/StatutesList.js`
+- Add additional routes and components as needed
 
-### Analyzing the Bundle Size
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open source and available under the MIT License.

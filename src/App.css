@@ -1,38 +1,158 @@
+/* src/App.css */
 .App {
-  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-content {
+  flex: 1;
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.filter-section {
+  margin-bottom: 24px;
+  padding: 16px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.statute-card {
+  margin-bottom: 16px;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.statute-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.statute-card.selected {
+  border: 2px solid #1976d2;
+}
+
+.statute-card-content {
+  padding-bottom: 8px !important;
+}
+
+.statute-card-header {
+  padding-bottom: 0 !important;
+}
+
+.tag-chip {
+  margin: 4px;
+}
+
+.search-input {
+  flex-grow: 1;
+  min-width: 200px;
+}
+
+.statute-detail-container {
+  background-color: white;
+  border-radius: 4px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  height: 100%;
+}
+
+.statute-detail-header {
+  margin-bottom: 24px;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 16px;
+}
+
+.statute-detail-metadata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.metadata-item {
+  display: flex;
+  align-items: center;
+}
+
+.statute-text {
+  margin-top: 24px;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.browser-container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.statutes-list-container {
+  flex: 1;
+  min-width: 0;
+}
+
+.statute-detail-view {
+  flex: 1;
+  min-width: 0;
+  position: sticky;
+  top: 24px;
+}
+
+@media (max-width: 900px) {
+  .browser-container {
+    flex-direction: column;
+  }
+  
+  .statute-detail-view {
+    position: static;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (max-width: 600px) {
+  .main-content {
+    padding: 16px;
+  }
+  
+  .filter-controls {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .statute-detail-container {
+    padding: 16px;
+  }
+}
+
+.empty-detail-placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
+  color: #9e9e9e;
+  padding: 32px;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.placeholder-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
 }
