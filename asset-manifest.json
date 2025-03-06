@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/statutes-browser/static/css/main.01add50e.css",
+    "main.js": "/statutes-browser/static/js/main.63778124.js",
+    "static/js/453.975d781f.chunk.js": "/statutes-browser/static/js/453.975d781f.chunk.js",
+    "index.html": "/statutes-browser/index.html",
+    "main.01add50e.css.map": "/statutes-browser/static/css/main.01add50e.css.map",
+    "main.63778124.js.map": "/statutes-browser/static/js/main.63778124.js.map",
+    "453.975d781f.chunk.js.map": "/statutes-browser/static/js/453.975d781f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.01add50e.css",
+    "static/js/main.63778124.js"
+  ]
+}
