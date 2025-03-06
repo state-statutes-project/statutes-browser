@@ -2,7 +2,7 @@
   "name": "statutes-browser",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://neelguha.github.io/statutes-browser",
+  "homepage": "https://state-statutes-project.github.io/statutes-browser",
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
