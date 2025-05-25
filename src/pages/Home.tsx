@@ -31,7 +31,7 @@ const Home = () => {
               The State Statutes Project
             </Heading>
             <Text 
-              fontSize="lg"
+              fontSize="md"
               color={textColor}
               lineHeight="1.6"
             >
@@ -42,7 +42,7 @@ const Home = () => {
           {/* Goals */}
           <Box>
             <Text 
-              fontSize="lg"
+              fontSize="md"
               color={textColor}
               lineHeight="1.6"
               mb={6}
