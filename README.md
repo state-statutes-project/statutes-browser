@@ -1,81 +1,79 @@
-# State Statutes Browser Frontend
+# The State Statutes Project
 
-This is a React frontend application for browsing state statutes. It connects to a backend API that serves statute data from a MongoDB database.
-
-## Features
-
-- Browse statutes with sorting and filtering
-- Filter by state and tags
-- Search statutes by keyword
-- View detailed statute information
-- Pagination for handling large datasets
-- Responsive design for mobile and desktop
-
-## Setup Instructions
-
-### Prerequisites
-
-- Node.js v14+ and npm
-- A running backend API (Express.js)
-
-### Installation
-
-1. Clone this repository:
-   ```
-   git clone https://github.com/yourusername/statutes-browser.git
-   cd statutes-browser
-   ```
-
-2. Install dependencies:
-   ```
-   npm install
-   ```
-
-3. Update the API URL in `src/services/api.js` to point to your backend server.
-
-4. Start the development server:
-   ```
-   npm start
-   ```
-
-### Deployment to GitHub Pages
-
-1. Update the `homepage` field in `package.json` with your GitHub username:
-   ```json
-   "homepage": "https://yourusername.github.io/statutes-browser"
-   ```
-
-2. Deploy to GitHub Pages:
-   ```
-   npm run deploy
-   ```
-
-3. Your application will be available at `https://yourusername.github.io/statutes-browser`
+A comprehensive web application for exploring and analyzing state statutes across the United States. This project combines advanced natural language processing with expert legal analysis to provide insights into state-level legislation.
 
 ## Project Structure
 
-- `src/App.js` - Main component and routing setup
-- `src/services/api.js` - API service for backend communication
-- `src/components/` - React components:
-  - `Header.js` - Navigation header
-  - `StatutesList.js` - List view with filtering
-  - `StatuteDetail.js` - Detailed view of a single statute
+### Web Application (`state-statutes-web/`)
+The React-based web application that serves as the frontend for the project.
 
-## Backend Connection
+#### Key Components:
+- `src/components/`
+  - `Navbar.tsx`: Main navigation component with links to all major sections
+- `src/pages/`
+  - `Home.tsx`: Landing page with project overview and featured content
+  - `About.tsx`: Project background, team information, and motivation
+  - `Explore.tsx`: Interactive data exploration interface with search and visualization
+  - `Methodology.tsx`: Detailed explanation of data collection and annotation process
+  - `CaseStudies.tsx`: In-depth analysis of specific statute types
+  - `Collaborate.tsx`: Collaboration form and partnership opportunities
+  - `Publications.tsx`: Research papers, media coverage, and related resources
+- `src/theme.ts`: Chakra UI theme configuration
+- `src/App.tsx`: Main application component with routing setup
 
-This frontend is designed to work with the Express.js backend API. Make sure your backend provides these endpoints:
+### Data Processing (`data_processing/`)
+Scripts and tools for processing and analyzing state statute data.
 
-- `GET /api/statutes` - List statutes with filtering and pagination
-- `GET /api/statutes/:id` - Get a specific statute by ID
-- `GET /api/states` - List available states
-- `GET /api/tags` - List available tags
+### Database (`db/`)
+Database schema and migration files for storing state statute data.
 
-## Customization
+## Local Development Setup
 
-- Update the theme in `src/App.js` to change colors and typography
-- Modify the filtering options in `src/components/StatutesList.js`
-- Add additional routes and components as needed
+### Prerequisites
+- Node.js (v18 or higher)
+- npm (v9 or higher)
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd state-statutes-db
+```
+
+2. Install dependencies for the web application:
+```bash
+cd state-statutes-web
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5173`
+
+### Available Scripts
+
+- `npm run dev`: Start the development server
+- `npm run build`: Build the application for production
+- `npm run lint`: Run ESLint to check for code issues
+- `npm run preview`: Preview the production build locally
+
+## Technology Stack
+
+- **Frontend**: React, TypeScript, Chakra UI
+- **Data Visualization**: Recharts
+- **Routing**: React Router
+- **Build Tool**: Vite
+- **Development**: ESLint, TypeScript
+
+## Contributing
+
+We welcome contributions to The State Statutes Project! Please see the [Collaborate](http://localhost:5173/collaborate) page for more information on how to get involved.
 
 ## License
 
-This project is open source and available under the MIT License.
+[Add license information here]
+
